@@ -1,0 +1,28 @@
+<div class="ui card lista-obras">
+    <div class="content">
+        <div class="header">Obras</div>
+    </div>
+    <div class="content">
+
+        <ng-container *ngIf="obras$ | async as obras; else carregando">
+            <ng-container *ngIf="obras.length > 0; else semObras">
+                <div *ngFor="let obra of obras" class="claim-row">
+                    <div>
+                        <strong>Marca e Modelo: </strong>{{ obra.id }}
+                    </div>
+                    <div>
+                        <strong>Proprietário: </strong>{{ obra.nome }}
+                    </div>
+                </div>
+            </ng-container>
+        </ng-container>
+
+        <ng-template #carregando>
+            Carregando obras...
+        </ng-template>
+
+        <ng-template #semObras>
+            Não há obras cadastradas.
+        </ng-template>
+    </div>
+</div>

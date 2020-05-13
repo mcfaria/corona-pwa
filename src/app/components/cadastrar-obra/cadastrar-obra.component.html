@@ -1,0 +1,37 @@
+<div class="ui card main-form">
+    <div class="content">
+        <h1 class="header">Cadastrar Obra</h1>
+    </div>
+    <div class="content">
+        <div class="ui large form equal width stackable grid">
+            <h3 class="title">Dados da Obra</h3>
+            <div class="three column row">
+                <div class="column field">
+                    <label for="carroModel">Unidade de Negócio</label>
+                    <select class="ui fluid search selection dropdown" [(ngModel)]="obra.unidade">
+                        <option *ngFor="let m of lista$ | async" class="item" [value]="m.nome">{{ m.nome }}
+                        </option>
+                    </select>
+                </div>
+
+                <div class="column field">
+                    <label for="id">Sigla</label>
+                    <input type="text" id="id" name="id" placeholder="Sigla" [(ngModel)]="obra.id" />
+                </div>
+                <div class="column field">
+                    <label for="nome">Nome da Obra</label>
+                    <input type="text" id="nome" name="nome" placeholder="Nome" [(ngModel)]="obra.nome" />
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="extra content">
+        <div class="row">
+            <button class="ui positive right floated button" (click)="salvar()">Salvar</button>
+        </div>
+        <div class="row notification-button-section">
+            <button class="ui button" (click)="enviarNotificacao()">Enviar notificação</button>
+        </div>
+    </div>
+</div>
