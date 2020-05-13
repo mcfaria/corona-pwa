@@ -1,6 +1,9 @@
 # Corona
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
+Para compilar esse projeto basta baixar ele e digitar
+`npm install`
+`npm run producao`
+
 
 ## Development server
 
