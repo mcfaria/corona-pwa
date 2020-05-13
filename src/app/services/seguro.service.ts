@@ -15,6 +15,10 @@ export class SeguroService extends BaseService<Seguro>  {
     return 'http://localhost:9000/api/seguros';
   }
 
+  getRotaFuga(): string {
+    return 'listar';
+  }
+
   constructor(protected injector: Injector) {
     super(injector);
   }

@@ -3,16 +3,16 @@
         <div class="header">Obras</div>
     </div>
     <div class="content">
-
         <ng-container *ngIf="obras$ | async as obras; else carregando">
             <ng-container *ngIf="obras.length > 0; else semObras">
                 <div *ngFor="let obra of obras" class="claim-row">
                     <div>
-                        <strong>Marca e Modelo: </strong>{{ obra.id }}
+                        <strong>Sigla: </strong>{{ obra.id }}
                     </div>
                     <div>
-                        <strong>Proprietário: </strong>{{ obra.nome }}
+                        <strong>Obra: </strong>{{ obra.nome }}
                     </div>
+                    <br>
                 </div>
             </ng-container>
         </ng-container>

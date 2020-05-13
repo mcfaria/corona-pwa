@@ -8,10 +8,8 @@ import { ListarObraComponent } from './components/listar-obra/listar-obra.compon
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'cadastro' },
-  { path: 'cadastro', component: CadastroSeguroComponent },
-  { path: 'listar', component: ListarSegurosComponent },
-  { path: 'cadastroobra', component: CadastrarObraComponent },
-  { path: 'listarobra', component: ListarObraComponent }
+  { path: 'cadastro', component: CadastrarObraComponent },
+  { path: 'listar', component: ListarObraComponent }
 ];
 
 @NgModule({

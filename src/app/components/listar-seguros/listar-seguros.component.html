@@ -8,7 +8,7 @@
             <ng-container *ngIf="seguros.length > 0; else semSeguros">
                 <div *ngFor="let seguro of seguros" class="claim-row">
                     <div>
-                        <strong>Marca e Modelo: </strong>{{ seguro.marcaCarro }} - {{ seguro.modeloCarro }}
+                        <strong>Unidade de Negócio: </strong>{{ seguro.marcaCarro }} - {{ seguro.modeloCarro }}
                     </div>
                     <div>
                         <strong>Proprietário: </strong>{{ seguro.nomeProprietario }} {{ seguro.sobrenomeProprietario }}
